@@ -17,6 +17,18 @@
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/sectionTwo.js"></script>
+    <!--<script src="https:/maps.googleapis.com/maps/api/js?key=AIzaSyBynquAeHbO9MLC8vX5WIujuDm7-8h9FFo"></script> -->
+    <script src="https:/maps.googleapis.com/maps/api/js?key=AIzaSyBynquAeHbO9MLC8vX5WIujuDm7-8h9FFo&callback=initMap"></script>
+    <style>
+      /* #btnLocation {
+        display: none;
+      }
+      */
+      #map-canvas {
+        height: 600px;
+        width: 100%;
+      }
+    </style>
     
     <title>CH 7: Geolocation</title>
 </head>
@@ -40,6 +52,10 @@
         
     <div id="container">
         <h2>7.2 Displaying a Map</h2>
+        <button type="button" class="btn btn-outline-primary" id="btnLocation" onclick="getLocation()">Get Location</button>
+        <button type="button" class="btn btn-outline-primary" id="btnClear" onclick="clearScreen()">Clear</button>
+        <div id="result"></div>
+        <div id="map-canvas"></div>
         
     </div><!--container-->
             
